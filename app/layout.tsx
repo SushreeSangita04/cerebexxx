@@ -65,6 +65,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { ClerkProvider } from '@clerk/nextjs';
 import { ThemeProvider } from '@/contexts/ThemeContext'; // ✅ Make sure the path is correct!
+import InitUser from '@/components/InitUser';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -109,6 +110,7 @@ export default function RootLayout({
       >
         <ClerkProvider>
           <ThemeProvider>
+            <InitUser/>
             <Navbar />
             {children}
             <Footer />
